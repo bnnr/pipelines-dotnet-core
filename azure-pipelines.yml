@@ -42,7 +42,7 @@ steps:
   inputs: 
     azureSubscription: 'demo_service_connection'
     appType: webAppLinux
-    appName: 'demo'
+    appName: 'bnnrdemo'
     package: $(System.ArtifactsDirectory)/**/*.zip
 
 #- script: dotnet build --configuration $(buildConfiguration)
