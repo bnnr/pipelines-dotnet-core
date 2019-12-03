@@ -38,5 +38,12 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     artifactName: 'demo'
 
+- task: AzureWebApp@1
+  inputs: 
+    azureSubscription: 'demo_service_connection'
+    appType: webAppLinux
+    appName: 'demo'
+    package: $(System.ArtifactsDirectory)/**/*.zip
+
 #- script: dotnet build --configuration $(buildConfiguration)
 #  displayName: 'dotnet build $(buildConfiguration)'
